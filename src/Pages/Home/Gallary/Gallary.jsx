@@ -16,28 +16,28 @@ import g6 from '../../../assets/gallery/g6.avif'
 
 const Gallary = () => {
     return (
-        <div className="mt-40 border px-10 lg:px-0" data-aos="fade-right" >
+        <div className="mt-40  px-10 lg:px-0" data-aos="fade-right" >
             <h1 className="text-4xl font-bold text-center " >Toy Gallery</h1>
 
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10'>
                 <div className=''>
-                    <img src={g1} alt="" className=' transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 rounded'/>
+                    <img src={g1} alt="" className=' transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-700 rounded'/>
                 </div>
                 <div>
-                    <img src={g2} alt="" className=' transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 rounded'/>
+                    <img src={g2} alt="" className=' transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-700 rounded'/>
                 </div>
                 <div>
-                    <img src={g3} alt="" className=' transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 rounded'/>
+                    <img src={g3} alt="" className=' transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-700 rounded'/>
                 </div>
                 <div>
-                    <img src={g4} alt="" className=' transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 rounded'/>
+                    <img src={g4} alt="" className=' transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-700 rounded'/>
                 </div>
                 <div>
-                    <img src={g5} alt="" className=' transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 rounded'/>
+                    <img src={g5} alt="" className=' transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-700 rounded'/>
                 </div>
                 <div>
-                    <img src={g6} alt="" className=' transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 rounded'/>
+                    <img src={g6} alt="" className=' transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-700 rounded'/>
                 </div>
                 
 
