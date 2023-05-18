@@ -74,7 +74,7 @@ const Navbar = () => {
         </div>
 
         <img src={logo} alt="logo" className="w-16 " />
-        <Link className="italic font-bold text-4xl" to='/'>ToyTrove</Link>
+        <Link className="italic font-bold text-xl lg:text-4xl pr-4 lg:pr-0 " to='/'>ToyTrove</Link>
       </div>
 
       <div className="navbar-center hidden lg:flex">

@@ -5,7 +5,7 @@ import toy4 from "../../../assets/toy4.avif";
 
 const Banner = () => {
   return (
-    <div className=" mt-10 h-[450px] ">
+    <div className=" mt-10 h-[450px]  px-10 lg:px-0">
       <div className="carousel w-full h-full">
         <div id="item1" className="carousel-item w-full relative">
           <img src={toy1} className="w-full" />
@@ -13,9 +13,9 @@ const Banner = () => {
           {/*  */}
 
           <div className="absolute h-full flex  items-center left-0 top-0 rounded-lg bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] ">
-            <div className="text-white  space-y-7 w-1/2 pl-12">
-              <h2 className="text-6xl ">Explore and Discover Playtime Magic</h2>
-              <p className="text-sm text-base-300">
+            <div className="text-white  space-y-7 lg:w-1/2 px-6  lg:pl-12">
+              <h2 className=" lg:text-6xl text-xl ">Explore and Discover Playtime Magic</h2>
+              <p className="text-sm  text-base-300 ">
                 Get ready to embark on an adventure like no other. With ToyTrove
                 as your guide, you will uncover a treasure trove of toys that
                 will bring joy, laughter, and hours of entertainment to children
@@ -39,8 +39,8 @@ const Banner = () => {
            {/*  */}
 
            <div className="absolute h-full flex  items-center left-0 top-0 rounded-lg bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] ">
-            <div className="text-white  space-y-7 w-1/2 pl-12">
-              <h2 className="text-6xl ">Find Your Perfect Playmate</h2>
+            <div className="text-white  space-y-7 lg:w-1/2 px-6  lg:pl-12">
+              <h2 className="lg:text-6xl text-xl">Find Your Perfect Playmate</h2>
               <p className="text-sm text-base-300">
               At ToyTrove, we believe in the power of play to nurture creativity and inspire young minds. Explore our curated selection of toys, carefully chosen to spark curiosity, encourage active play, and create unforgettable childhood memories.
               </p>
@@ -61,8 +61,8 @@ const Banner = () => {
            {/*  */}
 
            <div className="absolute h-full flex  items-center left-0 top-0 rounded-lg bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] ">
-            <div className="text-white  space-y-7 w-1/2 pl-12">
-              <h2 className="text-6xl ">A Treasure Trove of Toys</h2>
+            <div className="text-white  space-y-7 lg:w-1/2 px-6  lg:pl-12">
+              <h2 className="lg:text-6xl text-xl ">A Treasure Trove of Toys</h2>
               <p className="text-sm text-base-300">
               Our mission at ToyTrove is to provide a magical experience for children and adults alike. We handpick toys from trusted brands and designers who share our passion for quality, safety, and educational value. Let your imagination soar as you browse through our captivating selection.
               </p>
@@ -83,8 +83,8 @@ const Banner = () => {
            {/*  */}
 
            <div className="absolute h-full flex  items-center left-0 top-0 rounded-lg bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] ">
-            <div className="text-white  space-y-7 w-1/2 pl-12">
-              <h2 className="text-6xl ">Embrace the Joy of Toys</h2>
+            <div className="text-white  space-y-7 lg:w-1/2 px-6  lg:pl-12">
+              <h2 className="lg:text-6xl text-xl ">Embrace the Joy of Toys</h2>
               <p className="text-sm text-base-300">
               Prepare to be captivated by the wonders of playtime at ToyTrove. Step into a world where toys come to life, and dreams take flight. Discover the magic of childhood through our carefully curated collection, and embark on a journey of endless exploration and joy.
               </p>
