@@ -5,8 +5,10 @@ import { useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import useTitle from "../../Hook/useTitle";
 
 const Login = () => {
+  useTitle('ToyTrove || Login')
 
     const {LogIn,GoogleSignIn,UpdateProfileData} = useContext(AuthContext)
 

@@ -1,14 +1,58 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import useTitle from "../../Hook/useTitle";
 
 const AddToy = () => {
   const { user } = useContext(AuthContext);
   useTitle("ToyTrove || AddToy");
+ const [selectedCategory, setSelectedCategory] = useState([]);
+
+
+const handleSelectCategory = event =>{
+  setSelectedCategory(event.target.value)
+  //  console.log(event.target.value);
+}
+
 
 
 const handleAddToy = event =>{
-    event.preventDefault()
+    event.preventDefault();
+
+    const form = event.target;
+    const sellerName = user?.displayName;
+    const sellerEmail = user?.email;
+    const toyName = form.toyName.value;
+    const toyPhoto = form.toyPhoto.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    const quantity = form.quantity.value;
+    const description = form.description.value;
+    const subCategory = selectedCategory;
+
+
+
+    const addedToy ={
+      sellerName,sellerEmail,toyName,toyPhoto,price,rating,quantity,description,subCategory
+    }
+    console.log(addedToy);
+
+//  connect to server and mongodb
+fetch('http://localhost:5000/allToys',{
+  method:'POST',
+  headers:{
+    'content-type': 'application/json'
+  },
+  body:JSON.stringify(addedToy)
+
+})
+.then(res=>res.json())
+.then(data=>{
+  console.log(data);
+})
+
+
+
+
 }
 
 
@@ -131,7 +175,7 @@ const handleAddToy = event =>{
             <label className="label">
               <span className="label-text"> Sub Category </span>
             </label>
-            <select className="select  input input-bordered" defaultValue="">
+            <select className="select  input input-bordered" defaultValue="" onChange={handleSelectCategory}>
               <option value="" disabled>
                 Pick your favorite sub Category
               </option>

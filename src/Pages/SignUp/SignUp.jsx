@@ -4,9 +4,11 @@ import signup from "../../assets/signup.png";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import useTitle from "../../Hook/useTitle";
 
 
 const SignUp = () => {
+  useTitle('ToyTrove || Sign Up')
     const {CreateUser,GoogleSignIn,UpdateProfileData}= useContext(AuthContext);
 
   const [error, setError] = useState([])
