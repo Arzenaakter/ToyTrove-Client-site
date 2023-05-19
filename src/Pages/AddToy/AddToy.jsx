@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import Swal from "sweetalert2";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import useTitle from "../../Hook/useTitle";
 
@@ -47,6 +48,15 @@ fetch('http://localhost:5000/allToys',{
 })
 .then(res=>res.json())
 .then(data=>{
+ if(data.insertedId){
+  Swal.fire({
+    position: 'top-center',
+    icon: 'success',
+    title: 'Your Toy added successfully',
+    showConfirmButton: false,
+    timer: 1500
+  })
+ }
   console.log(data);
 })
 
