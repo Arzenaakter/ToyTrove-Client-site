@@ -4,6 +4,7 @@ import AllToyRow from "./AllToyRow";
 
 const AllToys = () => {
   const [allToys, setAllToys] = useState([]);
+  const [searchName, setSearchName] = useState('');
 
   useTitle("ToyTrove || All Toys");
 
@@ -16,6 +17,16 @@ const AllToys = () => {
   }, []);
 
 //   console.log(allToys);
+const handleSearch =()=>{
+  fetch(`http://localhost:5000/toyNameSearch/${searchName}`)
+  .then(res=>res.json())
+  .then(data =>{
+    setAllToys(data)
+  })
+
+}
+
+
 
   return (
     <div className="m-auto">
@@ -26,12 +37,12 @@ const AllToys = () => {
       <div className="flex justify-center">
       <div className="form-control">
         <div className="input-group">
-          <input
+          <input onChange={(e)=>setSearchName(e.target.value)}
             type="text"
             placeholder="Search Toy Name…"
             className="input input-bordered"
           />
-          <button className="btn btn-square">
+          <button className="btn btn-square" onClick={handleSearch}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
