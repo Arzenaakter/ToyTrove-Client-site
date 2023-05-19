@@ -54,13 +54,9 @@ const AllToys = () => {
       <div className="overflow-x-auto w-full my-20 border">
         <table className="table w-full">
           {/* head */}
-          <thead>
+          <thead >
             <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
+             
               <th>Seller Name</th>
               <th>Toy Name</th>
               <th>Sub-category</th>

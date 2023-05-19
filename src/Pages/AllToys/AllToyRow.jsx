@@ -4,11 +4,7 @@ const AllToyRow = ({ toy }) => {
   const { sellerName, toyName, price, quantity, subCategory,_id } = toy;
   return (
     <tr>
-      <th>
-        <label>
-          <input type="checkbox" className="checkbox" />
-        </label>
-      </th>
+      
 
       <td>{sellerName}</td>
       <td>{toyName}</td>
