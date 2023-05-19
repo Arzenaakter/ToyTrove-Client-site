@@ -15,7 +15,7 @@ const AllToys = () => {
       });
   }, []);
 
-  console.log(allToys);
+//   console.log(allToys);
 
   return (
     <div className="m-auto">
