@@ -56,6 +56,7 @@ fetch('http://localhost:5000/allToys',{
     showConfirmButton: false,
     timer: 1500
   })
+  form.reset()
  }
   console.log(data);
 })
