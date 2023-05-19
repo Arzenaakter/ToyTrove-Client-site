@@ -1,10 +1,51 @@
+
+
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
-const MyToyRow = ({toy}) => {
-    const {_id,toyName,toyPhoto,price,rating,quantity,description,subCategory} =toy
-    // const slicedDescription = description && description.split(" ").slice(0, 5).join(" ");
+const MyToyRow = ({toy,myToys,setMyToys}) => {
+
+
+    const {_id,toyName,toyPhoto,price,rating,quantity,description,subCategory} = toy;
+
+  
+
+    const handleDelete = _id =>{
+        // console.log(_id);
+        fetch(`http://localhost:5000/allToys/${_id}`,{
+            method:'DELETE'
+        })
+        .then(res=>res.json())
+        .then(data =>{
+            if(data.deletedCount > 0){
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                      Swal.fire(
+                        'Deleted!',
+                        'Your toy has been deleted.',
+                        'success'
+                      )
+                    }
+                  })
+                //   
+
+               
+            }
+            const remaining = myToys.filter(del => del._id !== _id);
+            setMyToys(remaining)
+            console.log(data);
+        })
+    }
 
 
     return (
@@ -27,7 +68,7 @@ const MyToyRow = ({toy}) => {
       </td>
       <td>
         <Link >
-            <button ><FaTrashAlt className="text-error text-2xl"/></button>
+            <button onClick={()=> handleDelete(_id)} ><FaTrashAlt className="text-error text-2xl"/></button>
         </Link>
       </td>
     </tr>

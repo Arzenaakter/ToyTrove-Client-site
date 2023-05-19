@@ -1,12 +1,14 @@
 
 import { useContext, useState } from "react";
 import { useEffect } from "react";
+
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import useTitle from "../../Hook/useTitle";
 import MyToyRow from "./MyToyRow";
 
 
 const MyToys = () => {
+    
 
     const {user} = useContext(AuthContext)
     const [myToys, setMyToys] = useState([])
@@ -53,7 +55,11 @@ useEffect(()=>{
           <tbody>
             {/* row 1 */}
             {myToys.map((toy) => (
-              <MyToyRow key={toy._id} toy={toy}></MyToyRow>
+              <MyToyRow key={toy._id} toy={toy}
+              myToys={myToys}
+              setMyToys={setMyToys}
+             
+              ></MyToyRow>
             ))}
           </tbody>
         </table>
