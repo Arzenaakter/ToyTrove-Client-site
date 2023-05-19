@@ -1,28 +1,27 @@
-import { useContext, useState } from "react";
+
+import { useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
-import useTitle from "../../Hook/useTitle";
-
-const AddToy = () => {
-  const { user } = useContext(AuthContext);
-  useTitle("ToyTrove || AddToy");
-
- const [selectedCategory, setSelectedCategory] = useState([]);
 
 
-const handleSelectCategory = event =>{
-  setSelectedCategory(event.target.value)
-  //  console.log(event.target.value);
-}
+const UpdateToy = () => {
+  const UpdateToy = useLoaderData();
+  const { toyName,toyPhoto,rating,_id } = UpdateToy;
+
+  const [selectedCategory, setSelectedCategory] = useState([]);
 
 
+  const handleSelectCategory = event =>{
+    setSelectedCategory(event.target.value)
+    //  console.log(event.target.value);
+  }
+  
 
-const handleAddToy = event =>{
+  const handleUpdateToy = (event) => {
     event.preventDefault();
 
     const form = event.target;
-    const sellerName = user?.displayName;
-    const sellerEmail = user?.email;
+   
     const toyName = form.toyName.value;
     const toyPhoto = form.toyPhoto.value;
     const price = form.price.value;
@@ -31,78 +30,45 @@ const handleAddToy = event =>{
     const description = form.description.value;
     const subCategory = selectedCategory;
 
+    const updatedInfo = { toyName,toyPhoto,price,rating,quantity,description,subCategory };
+    // console.log(updatedInfo);
 
-
-    const addedToy ={
-      sellerName,sellerEmail,toyName,toyPhoto,price,rating,quantity,description,subCategory
-    }
-    console.log(addedToy);
-
-//  connect to server and mongodb
-fetch('http://localhost:5000/allToys',{
-  method:'POST',
-  headers:{
-    'content-type': 'application/json'
-  },
-  body:JSON.stringify(addedToy)
-
-})
-.then(res=>res.json())
-.then(data=>{
- if(data.insertedId){
-  Swal.fire({
-    position: 'top-center',
-    icon: 'success',
-    title: 'Your Toy added successfully',
-    showConfirmButton: false,
-    timer: 1500
-  })
-  form.reset()
- }
-  console.log(data);
-})
-
-
-
-
-}
-
-
+    // update
+    fetch(`http://localhost:5000/allToys/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updatedInfo),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.modifiedCount > 0) {
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Your Toy Updated successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          form.reset();
+          
+        }
+       
+        console.log(data);
+        
+      });
+  };
 
   return (
-    <div className="my-20">
-      <h1 className="text-4xl font-bold text-center mb-10">Add A Toy</h1>
+    <div className="my-10 border p-10">
+      <h1 className="text-4xl font-bold text-center mb-10">
+        Update Toy: {toyName}
+      </h1>
 
-      <form onSubmit={handleAddToy}>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* seller name */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Seller Name</span>
-            </label>
-
-            <input
-              type="text"
-              name="sellerName"
-              required
-              defaultValue={user?.displayName}
-              className="input input-bordered"
-            />
-          </div>
-          {/* seller email */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Seller Email</span>
-            </label>
-
-            <input
-              type="email"
-              name="sellerEmail"
-              required
-              defaultValue={user?.email}
-              className="input input-bordered"
-            />
-          </div>
+      <form onSubmit={handleUpdateToy} >
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+       
           {/* Toy name */}
           <div className="form-control">
             <label className="label">
@@ -113,6 +79,7 @@ fetch('http://localhost:5000/allToys',{
               type="text"
               name="toyName"
               required
+             defaultValue={toyName}
               className="input input-bordered"
             />
           </div>
@@ -125,7 +92,7 @@ fetch('http://localhost:5000/allToys',{
             <input
               type="text"
               name="toyPhoto"
-              required
+          defaultValue={toyPhoto}
               className="input input-bordered"
             />
           </div>
@@ -153,6 +120,7 @@ fetch('http://localhost:5000/allToys',{
               type="text"
               name="rating"
               required
+              defaultValue={rating}
               className="input input-bordered"
             />
           </div>
@@ -187,7 +155,7 @@ fetch('http://localhost:5000/allToys',{
             <label className="label">
               <span className="label-text"> Sub Category </span>
             </label>
-            <select className="select  input input-bordered" required defaultValue="" onChange={handleSelectCategory}>
+            <select className="select  input input-bordered" required defaultValue='' onChange={handleSelectCategory}>
               <option value="" disabled>
                 Pick your favorite sub Category
               </option>
@@ -205,11 +173,11 @@ fetch('http://localhost:5000/allToys',{
         </div>
         <div className="form-control mt-6">
           
-          <input className="btn btn-block bg-red-400 border-none" type="submit" value="Add Toy" />
+          <input className="btn btn-block bg-red-400 border-none" type="submit" value="Update Toy" />
         </div>
       </form>
     </div>
   );
 };
 
-export default AddToy;
+export default UpdateToy;

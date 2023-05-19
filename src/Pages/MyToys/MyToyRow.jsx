@@ -21,12 +21,12 @@ const MyToyRow = ({toy}) => {
       <td>{quantity}</td>
       <td>{rating}</td>
       <td>
-        <Link  >
+        <Link   to ={`/updateToyInfo/${_id}`} >
             <button ><FaEdit className="text-info text-2xl"/></button>
         </Link>
       </td>
       <td>
-        <Link  >
+        <Link >
             <button ><FaTrashAlt className="text-error text-2xl"/></button>
         </Link>
       </td>
