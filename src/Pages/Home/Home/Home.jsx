@@ -6,6 +6,7 @@ import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import Gallary from "../Gallary/Gallary";
 import NewArrival from "../NewArrival/NewArrival";
+import BestSelling from "../BestSelling/BestSelling";
 
 
 const Home = () => {
@@ -33,6 +34,7 @@ visible={true}
           <Gallary></Gallary>
           <Category></Category>
           <NewArrival></NewArrival>
+          <BestSelling></BestSelling>
           
         </div>
     );
