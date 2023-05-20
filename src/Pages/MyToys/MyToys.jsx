@@ -8,10 +8,10 @@ import MyToyRow from "./MyToyRow";
 
 
 const MyToys = () => {
-    
 
     const {user} = useContext(AuthContext)
     const [myToys, setMyToys] = useState([])
+    
    
     useTitle('ToyTrove || MyToys')
 
@@ -23,6 +23,21 @@ useEffect(()=>{
 },[user])
 
 
+const handlePrice =(e)=>{
+    const option = e.target.value;
+    // let sortedToys = [...myToys];
+  
+    // if (option === "asc") {
+    //   sortedToys.sort((a, b) => a.price - b.price);
+    // } else if (option === "desc") {
+    //   sortedToys.sort((a, b) => b.price - a.price);
+    // }
+    console.log(option);
+  
+    // setMyToys(sortedToys);
+}
+
+
 
     return (
         <div >
@@ -30,6 +45,17 @@ useEffect(()=>{
                
               <h1>User: {user?.displayName}</h1>
               <h1>Email: {user?.email}</h1>
+            </div>
+
+            <div className="text-center mt-10 text-2xl font-bold">
+            <select className="select  input input-bordered" required defaultValue="" onChange={handlePrice}>
+              <option value="" disabled>
+                Price
+              </option>
+              <option value="asc">Ascending </option>
+              <option value="desc">Descending</option>
+              
+            </select>
             </div>
            
            <div className="overflow-x-auto w-full my-20 border ">

@@ -10,7 +10,7 @@ const SingleToy = () => {
     return (
      <div className="my-10">
 
-<div className="hero min-h-screen bg-red-100 rounded-lg mx-auto border ">
+<div className="hero min-h-screen bg-[#b1b1b1]  rounded-lg mx-auto border ">
   <div className="hero-content flex-col lg:flex-row gap-10">
   
   <img src={toyPhoto} className="max-w-sm rounded-lg shadow-2xl border-2  " />
