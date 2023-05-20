@@ -14,7 +14,7 @@ const MyToyRow = ({toy,myToys,setMyToys}) => {
 
     const handleDelete = _id =>{
         // console.log(_id);
-        fetch(`http://localhost:5000/allToys/${_id}`,{
+        fetch(`https://toy-trove-server-three.vercel.app/allToys/${_id}`,{
             method:'DELETE'
         })
         .then(res=>res.json())

@@ -9,7 +9,7 @@ const AllToys = () => {
   useTitle("ToyTrove || All Toys");
 
   useEffect(() => {
-    fetch("http://localhost:5000/allToys")
+    fetch("https://toy-trove-server-three.vercel.app/allToys")
       .then((res) => res.json())
       .then((data) => {
         setAllToys(data);
@@ -18,7 +18,7 @@ const AllToys = () => {
 
 //   console.log(allToys);
 const handleSearch =()=>{
-  fetch(`http://localhost:5000/toyNameSearch/${searchName}`)
+  fetch(`https://toy-trove-server-three.vercel.app/toyNameSearch/${searchName}`)
   .then(res=>res.json())
   .then(data =>{
     setAllToys(data)
