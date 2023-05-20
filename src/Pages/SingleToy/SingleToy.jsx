@@ -5,7 +5,7 @@ const SingleToy = () => {
     const singleToy = useLoaderData()
     const {sellerName,sellerEmail,toyName,toyPhoto,price,rating,quantity,description,subCategory} = singleToy;
 
-    console.log(singleToy);
+    // console.log(singleToy);
 
     return (
      <div className="my-10">

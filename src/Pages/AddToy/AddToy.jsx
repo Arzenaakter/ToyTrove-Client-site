@@ -36,7 +36,7 @@ const handleAddToy = event =>{
     const addedToy ={
       sellerName,sellerEmail,toyName,toyPhoto,price,rating,quantity,description,subCategory
     }
-    console.log(addedToy);
+    // console.log(addedToy);
 
 //  connect to server and mongodb
 fetch('http://localhost:5000/allToys',{
@@ -59,7 +59,7 @@ fetch('http://localhost:5000/allToys',{
   })
   form.reset()
  }
-  console.log(data);
+  // console.log(data);
 })
 
 

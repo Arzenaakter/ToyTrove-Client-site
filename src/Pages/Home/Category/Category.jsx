@@ -28,17 +28,6 @@ const Category = () => {
     },[])
 
 
-// useEffect(()=>{
-//     fetch(`http://localhost:5000/myToys/${user?.email}`)
-//     .then(res=>res.json())
-//     .then(data=>setMyToys(data))
-
-// },[user])
-// // console.log(selectSubCategory);
-
-
-
-
 
     //sports category 
 const handleSoprtsCate = ()=>{
@@ -65,7 +54,7 @@ const handleRegularCar = ()=>{
     const categories = ['Sedans', 'Hatchbacks', 'SUVs'];
     const RegularCarCategory = allToys.filter(toy => categories.includes(toy.subCategory));
     setSelectSubCategory(RegularCarCategory)
-    console.log(RegularCarCategory);
+    // console.log(RegularCarCategory);
 
 }
 

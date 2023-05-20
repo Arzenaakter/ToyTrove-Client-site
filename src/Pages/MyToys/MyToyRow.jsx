@@ -43,7 +43,7 @@ const MyToyRow = ({toy,myToys,setMyToys}) => {
             }
             const remaining = myToys.filter(del => del._id !== _id);
             setMyToys(remaining)
-            console.log(data);
+            // console.log(data);
         })
     }
 

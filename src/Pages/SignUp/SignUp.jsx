@@ -28,7 +28,7 @@ const SignUp = () => {
         const confirm = form.confirm.value;
         setError(' ')
 
-        console.log(name,email,photo,password,confirm);
+        // console.log(name,email,photo,password,confirm);
 
         // password validation
         if(password<= 6){
@@ -58,7 +58,7 @@ const SignUp = () => {
 
               navigate(from,{replace:true});
               UpdateProfileUser(result.user,name,photo)
-              console.log('object', UpdateProfileUser(result.user,name,photo));
+              // console.log('object', UpdateProfileUser(result.user,name,photo));
       
  
 

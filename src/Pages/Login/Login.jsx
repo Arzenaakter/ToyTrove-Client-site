@@ -29,7 +29,7 @@ const Login = () => {
         const password = form.password.value;
         setError(' ')
 
-        console.log(email,password);
+        // console.log(email,password);
         // authentication
         LogIn(email,password)
         .then(result =>{
@@ -57,7 +57,7 @@ const Login = () => {
         GoogleSignIn()
         .then(result =>{
             const googleUser = result.user
-            console.log(googleUser);
+            // console.log(googleUser);
             Swal.fire({
                 position: 'top-center',
                 icon: 'success',

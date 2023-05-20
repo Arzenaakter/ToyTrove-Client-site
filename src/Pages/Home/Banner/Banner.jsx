@@ -1,5 +1,4 @@
 import toy2 from "../../../assets/toy9.avif";
-import toy1 from "../../../assets/toy2.avif";
 import toy3 from "../../../assets/toy3.avif";
 import toy4 from "../../../assets/toy4.avif";
 
@@ -8,7 +7,7 @@ const Banner = () => {
     <div className=" mt-10 h-[450px]  px-10 lg:px-0">
       <div className="carousel w-full h-full">
         <div id="item1" className="carousel-item w-full relative">
-          <img src={toy1} className="w-full" />
+          <img src='https://i.ibb.co/YB4gZy8/download-5.jpg' className="w-full" />
 
           {/*  */}
 
@@ -102,7 +101,7 @@ const Banner = () => {
       </div>
       <div className="flex justify-center w-full py-2 gap-2">
         <a href="#item1" className="w-16">
-          <img src={toy1} alt="" />
+          <img src='https://i.ibb.co/YB4gZy8/download-5.jpg' alt="" />
         </a>
         <a href="#item2" className="w-16">
           <img src={toy2} alt="" />

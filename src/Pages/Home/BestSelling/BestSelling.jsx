@@ -48,7 +48,7 @@ useEffect(()=>{
       </div>
       <div className="text-center pb-10 my-10">
         {
-            seeMore || bestsellData.length <=6 ? " " : <button className="btn btn-error text-white" onClick={handleSeeMore}>Show All</button>
+            seeMore || bestsellData.length <=6 ? " " : <button className="btn btn-error text-white" onClick={handleSeeMore}>Show More</button>
         }
 
       </div>
