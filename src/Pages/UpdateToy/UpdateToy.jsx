@@ -37,9 +37,9 @@ const UpdateToy = () => {
     fetch(`http://localhost:5000/allToys/${_id}`, {
       method: "PUT",
       headers: {
-        "content-type": "application/json",
+        "content-type": "application/json"
       },
-      body: JSON.stringify(updatedInfo),
+      body: JSON.stringify(updatedInfo)
     })
       .then((res) => res.json())
       .then((data) => {
@@ -55,7 +55,7 @@ const UpdateToy = () => {
           
         }
        
-        // console.log(data);
+        console.log(data);
         
       });
   };

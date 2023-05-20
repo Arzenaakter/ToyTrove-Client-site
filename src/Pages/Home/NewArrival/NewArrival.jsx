@@ -32,6 +32,10 @@ const NewArrival = () => {
               src='https://i.ibb.co/YB4gZy8/download-5.jpg'
               className="w-96 h-full"
             />
+              <img
+              src='https://i.ibb.co/wB1bw2f/images.jpg'
+              className="w-96 h-full"
+            />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a href="#slide4" className="text-3xl text-white ">
                 ❮
@@ -57,6 +61,11 @@ const NewArrival = () => {
               src='https://i.ibb.co/MBZKvYK/images-1.jpg'
               className="w-96 h-full"
             />
+             <img
+              src='https://i.ibb.co/6XD4hDC/images-3.jpg'
+              className="w-96 h-full"
+            />
+            
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a href="#slide1" className="text-3xl text-white ">
                 ❮
@@ -79,6 +88,10 @@ const NewArrival = () => {
             />
             <img
               src='https://i.ibb.co/2352d3X/images-5.jpg'
+              className="w-96 h-full"
+            />
+            <img
+              src='https://i.ibb.co/wB1bw2f/images.jpg'
               className="w-96 h-full"
             />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

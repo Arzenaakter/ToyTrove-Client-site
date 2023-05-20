@@ -53,7 +53,8 @@ const Login = () => {
 
     }
 
-    const handleGoogleSignin = ()=>{
+    const handleGoogleSignin = (e)=>{
+      e.preventDefault()
         GoogleSignIn()
         .then(result =>{
             const googleUser = result.user

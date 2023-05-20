@@ -30,9 +30,9 @@ useEffect(()=>{
 
     return (
         <div className="mt-20 px-10 lg:px-0 ">
-      <h1 className="my-10 text-center text-3xl font-bold" data-aos="fade-left">
-           Best Selling
-      </h1>
+            <h1 className="my-10 text-center text-3xl font-bold" data-aos="fade-left">
+                Best Selling
+            </h1>
 
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
          {

@@ -8,7 +8,7 @@ const Selling = ({bestData}) => {
             <div>
                 <h1 className='font-semibold text-xl'>{toyname}</h1>
                 <p className='font-semibold'>Price: ${price}</p>
-                <p className='flex gap-4'> <Rating style={{ maxWidth: 100 }} value={rating} readOnly />{rating}</p>
+                <div className='flex gap-4'> <Rating style={{ maxWidth: 100 }} value={rating} readOnly />{rating}</div>
             </div>
             
         </div>
