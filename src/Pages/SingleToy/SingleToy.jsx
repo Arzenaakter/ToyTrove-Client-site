@@ -19,7 +19,7 @@ const SingleToy = () => {
       <h1 className="text-4xl font-bold">Toy Name: {toyName}</h1>
       <h3 className="text-xl "><span className="font-bold">Seller Name:</span> {sellerName}</h3>
       <h3 className="text-xl "><span className="font-bold">Seller Email:</span> {sellerEmail}</h3>
-      <h3 className="text-xl "><span className="font-bold">Toy Price:</span> {price}</h3>
+      <h3 className="text-xl "><span className="font-bold">Toy Price:</span>$ {price}</h3>
       <h3 className="text-xl "><span className="font-bold">Rating:</span> {rating}</h3>
       <h3 className="text-xl "><span className="font-bold">Quantity:</span> {quantity}</h3>
       <h3 className="text-xl "><span className="font-bold">Sub Category: </span> {subCategory}</h3>

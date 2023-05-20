@@ -5,6 +5,7 @@ import useTitle from "../../../Hook/useTitle";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import Gallary from "../Gallary/Gallary";
+import NewArrival from "../NewArrival/NewArrival";
 
 
 const Home = () => {
@@ -31,6 +32,7 @@ visible={true}
           <Banner></Banner>
           <Gallary></Gallary>
           <Category></Category>
+          <NewArrival></NewArrival>
           
         </div>
     );

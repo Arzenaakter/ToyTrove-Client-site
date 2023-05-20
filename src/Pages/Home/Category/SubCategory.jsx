@@ -38,7 +38,7 @@ const SubCategory = ({subCate}) => {
           <span className="font-bold"> Sub Category:</span>  {subCategory}
         </h3>
     
-        <p ><span className="font-bold">Price:</span> {price}</p>
+        <p ><span className="font-bold">Price:</span> ${price}</p>
 
             <div className='flex gap-2'>
             <Rating style={{ maxWidth: 120 }} value={rating} readOnly />

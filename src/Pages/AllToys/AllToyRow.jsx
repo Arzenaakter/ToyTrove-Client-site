@@ -31,7 +31,7 @@ const AllToyRow = ({ toy }) => {
       <td>{sellerName}</td>
       <td>{toyName}</td>
       <td>{subCategory}</td>
-      <td>{price}</td>
+      <td>${price}</td>
       <td>{quantity}</td>
       <td>
         <Link to={`/singleToy/${_id}`} className="btn btn-outline" onClick={handleView}>
