@@ -75,12 +75,9 @@ const SignUp = () => {
               console.log(error);
       
             })
-      
-          
+         
         };
-      
-      
-      
+         
         }
 
 

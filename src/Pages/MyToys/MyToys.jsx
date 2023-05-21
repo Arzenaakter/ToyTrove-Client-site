@@ -24,17 +24,11 @@ useEffect(()=>{
 
 
 const handlePrice =(e)=>{
-    const option = e.target.value;
-    // let sortedToys = [...myToys];
+  const option = e.target.value;
   
-    // if (option === "asc") {
-    //   sortedToys.sort((a, b) => a.price - b.price);
-    // } else if (option === "desc") {
-    //   sortedToys.sort((a, b) => b.price - a.price);
-    // }
-    console.log(option);
-  
-    // setMyToys(sortedToys);
+  fetch(`http://localhost:5000/myToys/${user?.email}?sortBy=${option}`)
+  .then((res) => res.json())
+  .then((data) => setMyToys(data));
 }
 
 
