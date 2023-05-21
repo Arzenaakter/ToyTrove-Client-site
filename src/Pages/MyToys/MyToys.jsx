@@ -16,7 +16,7 @@ const MyToys = () => {
     useTitle('ToyTrove || MyToys')
 
 useEffect(()=>{
-    fetch(`http://localhost:5000/myToys/${user?.email}`)
+    fetch(`https://toy-trove-server-three.vercel.app/myToys/${user?.email}`)
     .then(res=>res.json())
     .then(data=>setMyToys(data))
 
@@ -26,7 +26,7 @@ useEffect(()=>{
 const handlePrice =(e)=>{
   const option = e.target.value;
   
-  fetch(`http://localhost:5000/myToys/${user?.email}?sortBy=${option}`)
+  fetch(`https://toy-trove-server-three.vercel.app/myToys/${user?.email}?sortBy=${option}`)
   .then((res) => res.json())
   .then((data) => setMyToys(data));
 }

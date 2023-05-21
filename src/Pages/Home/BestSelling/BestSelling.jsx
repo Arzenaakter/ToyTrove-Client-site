@@ -19,7 +19,7 @@ const BestSelling = () => {
 
 
 useEffect(()=>{
-    fetch('http://localhost:5000/bestSelling')
+    fetch('https://toy-trove-server-three.vercel.app/bestSelling')
     .then(res=>res.json())
     .then(data => {
         setBestSellData(data)
