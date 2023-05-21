@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link  } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import signup from "../../assets/signup.png";
 import { useContext, useState } from "react";
@@ -12,10 +12,7 @@ const SignUp = () => {
     const {CreateUser,GoogleSignIn,UpdateProfileData}= useContext(AuthContext);
 
   const [error, setError] = useState([])
-  const navigate = useNavigate()
-  const location = useLocation();
  
-  const from = location.state?.from?.pathname || "/"
 
     const handleSigUp=(event)=>{
         event.preventDefault()
@@ -31,9 +28,9 @@ const SignUp = () => {
         // console.log(name,email,photo,password,confirm);
 
         // password validation
-        if(password<= 6){
+        if(password.length<= 6){
             setError('Password must be 6 character')
-            return
+            return;
         }
         if(password != confirm){
             setError("Password Does Not Matched");
@@ -56,13 +53,10 @@ const SignUp = () => {
                 timer: 1500
               })
 
-              navigate(from,{replace:true});
+              
               UpdateProfileUser(result.user,name,photo)
-              // console.log('object', UpdateProfileUser(result.user,name,photo));
+       
       
- 
-
-
 
         })
         .catch(err =>{
@@ -93,8 +87,8 @@ const SignUp = () => {
 
 
     
-    const handleGoogleSignin = (e)=>{
-      e.preventDefault()
+    const handleGoogleSignin = ()=>{
+   
         GoogleSignIn()
         .then(result =>{
             const googleUser = result.user
@@ -106,7 +100,7 @@ const SignUp = () => {
                 showConfirmButton: false,
                 timer: 1500
               })
-              navigate(from,{replace:true});
+            
               UpdateProfileData(googleUser.displayName,googleUser.photoURL)
              
 

@@ -19,7 +19,7 @@ const Category = () => {
 
 
     useEffect(()=>{
-        fetch('https://toy-trove-server-three.vercel.app/allToys/')
+        fetch('http://localhost:5000/allToys/')
         .then(res=>res.json())
         .then(data=>{
             setAllToys(data);

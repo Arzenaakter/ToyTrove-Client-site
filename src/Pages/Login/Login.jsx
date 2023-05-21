@@ -35,7 +35,7 @@ const Login = () => {
         .then(result =>{
             const loggedUser = result.user;
             console.log(loggedUser);
-            form.reset()
+           
             Swal.fire({
                 position: 'top-center',
                 icon: 'success',
@@ -44,6 +44,7 @@ const Login = () => {
                 timer: 1500
               })
               navigate(from,{replace:true});
+              form.reset()
         })
         .catch(err =>{
             console.log(err);
@@ -53,8 +54,8 @@ const Login = () => {
 
     }
 
-    const handleGoogleSignin = (e)=>{
-      e.preventDefault()
+    const handleGoogleSignin = ()=>{
+     
         GoogleSignIn()
         .then(result =>{
             const googleUser = result.user

@@ -20,7 +20,7 @@ const AuthProvider = ({children}) => {
     const CreateUser = (email,password)=>{
         setLoading(true)
         return createUserWithEmailAndPassword(auth,email,password)
-    }
+    };
 
 
     // login
@@ -40,7 +40,7 @@ const AuthProvider = ({children}) => {
     const GoogleSignIn =()=>{
         setLoading(true)
         return signInWithPopup(auth,googleProvider)
-    }
+    };
 
 
 

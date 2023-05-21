@@ -39,7 +39,7 @@ const handleAddToy = event =>{
     // console.log(addedToy);
 
 //  connect to server and mongodb
-fetch('https://toy-trove-server-three.vercel.app/allToys',{
+fetch('http://localhost:5000/allToys',{
   method:'POST',
   headers:{
     'content-type': 'application/json'
