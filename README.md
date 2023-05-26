@@ -15,7 +15,7 @@
 * All Toys page have all the toy list where so many user added their toy info.
 * Blog page have some random Question with answer
 * If user can go any wrong location then he/she will see a error page with home button
-
+* It's a MERN stack base project
 
 
 
