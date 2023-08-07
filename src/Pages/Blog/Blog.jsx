@@ -3,7 +3,7 @@ import useTitle from "../../Hook/useTitle";
 const Blog = () => {
   useTitle("ToyTrove || Blog");
   return (
-    <div className="my-10  ">
+    <div className="my-10 container  m-auto px-10 lg:px-10">
       <div className="rounded p-6 mb-10 bg-info">
         <h1 className="text-2xl font-bold">
           What is an access token and refresh token? How do they work and where

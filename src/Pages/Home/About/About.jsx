@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="my-20 px-10 lg:px-0 flex lg:flex-row flex-col justify-center gap-10">
+    <div className="my-20 px-10 lg:px-0 flex lg:flex-row flex-col justify-center gap-10 container  m-auto">
       <div className="lg:w-[50%] w-[100%]">
         <img
           className=""
@@ -22,7 +22,9 @@ const About = () => {
           enthusiasts at Troy Marketplace, and lets redefine the way we shop,
           connect, and thrive together.
         </p>
-        <button className="btn btn-error text-white mr-5">Explore More</button>
+        <button className="btn bg-[#045b62] text-white mr-5">
+          Explore More
+        </button>
       </div>
     </div>
   );

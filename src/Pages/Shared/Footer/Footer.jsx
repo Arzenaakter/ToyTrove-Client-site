@@ -3,8 +3,8 @@ import logo from "../../../../public/car.png";
 
 const Footer = () => {
   return (
-    <div className="border-t  mb-0 ">
-      <footer className="footer p-10 bg-base-200 text-base-content ">
+    <div className="bg-base-200 ">
+      <footer className="footer p-10  text-base-content ">
         <div className="mx-auto lg:mx-0">
           <span className="footer-title">Services</span>
           <a className="link link-hover">Branding</a>
@@ -27,7 +27,7 @@ const Footer = () => {
             Add Toys
           </Link>
         </div>
-        <div className="mx-auto lg:mx-0"> 
+        <div className="mx-auto lg:mx-0">
           <span className="footer-title">Legal</span>
           <a className="link link-hover">Terms of use</a>
           <a className="link link-hover">Privacy policy</a>

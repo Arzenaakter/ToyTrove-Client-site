@@ -8,6 +8,8 @@ import Gallary from "../Gallary/Gallary";
 import NewArrival from "../NewArrival/NewArrival";
 import BestSelling from "../BestSelling/BestSelling";
 import About from "../About/About";
+import Review from "../Review/Review";
+import Contact from "../Contact/Contact";
 
 const Home = () => {
   const { loading } = useContext(AuthContext);
@@ -35,6 +37,8 @@ const Home = () => {
       <NewArrival></NewArrival>
       <BestSelling></BestSelling>
       <About></About>
+      <Contact></Contact>
+      <Review></Review>
     </div>
   );
 };
